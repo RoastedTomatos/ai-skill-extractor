@@ -37,9 +37,7 @@ export async function POST(request: Request) {
     try {
       result = await fetchSkillMatrixWithAI(jd);
     } catch (error) {
-      // Extract a user-friendly error message
       if (error instanceof Error) {
-        // If it's already a formatted error from fetchSkillMatrixWithAI, use it
         aiError = error.message;
       } else {
         aiError = "AI extraction failed. Falling back to deterministic parser.";

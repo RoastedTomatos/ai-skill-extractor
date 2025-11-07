@@ -77,7 +77,7 @@ const inferSeniority = (jd: string): SkillMatrix["seniority"] => {
 const tokenise = (jd: string) =>
   jd
     .toLowerCase()
-    .replace(/[^a-z0-9+#+/\.\s-]/g, " ")
+    .replace(/[^\p{L}\p{N}+#+/\.\s-]/gu, " ")
     .split(/\s+/)
     .filter(Boolean);
 
@@ -135,7 +135,7 @@ const parseSalary = (jd: string): SalaryTuple | undefined => {
     "zł": "PLN",
   } as const;
 
-  const salaryRegex = /(?:(USD|EUR|PLN|GBP)|([$€£]))?\s*\$?(\d{2,5})([kK])?(?:\s*(?:-|to)\s*\$?(\d{2,5})([kK])?)?/i;
+  const salaryRegex = /(?:(USD|EUR|PLN|GBP)|([$€£]))?\s*\$?(\d{2,5})([kK])?(?:\s*(?:-|to)\s*\$?(\d{2,5})([kK])?)?(?:\s*\/?(?:year|month))?/i;
   const match = jd.match(salaryRegex);
   if (!match) return undefined;
 
