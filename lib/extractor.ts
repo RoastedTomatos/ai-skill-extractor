@@ -179,11 +179,11 @@ const extractBulletSections = (jd: string) => {
 
     const lowered = line.toLowerCase();
 
-    if (/must\s*(have)?|requirements|required/.test(lowered)) {
+    if (/^(requirements|must[-\s]?have|qualifications|required skills?)\b/.test(lowered)) {
       activeSection = "must";
       continue;
     }
-    if (/nice\s*to\s*have|preferred|bonus/.test(lowered)) {
+    if (/^(nice[-\s]?to[-\s]?have|preferred|bonus|optional)\b/.test(lowered)) {
       activeSection = "nice";
       continue;
     }
@@ -204,6 +204,7 @@ const extractBulletSections = (jd: string) => {
     nice: uniq(sections.nice),
   };
 };
+
 
 const buildSummary = (payload: SkillMatrix) => {
   const parts: string[] = [];
