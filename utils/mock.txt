@@ -1,0 +1,26 @@
+Job Title: Senior Backend Engineer (Node.js + AWS)
+
+About the Role:
+We’re building a distributed analytics platform for fintech clients. You’ll be working in a small, fast-moving team that values pragmatic engineering over bureaucracy.
+
+Requirements:
+
+* 5+ years of experience in backend development
+* Strong proficiency in Node.js, TypeScript, and PostgreSQL
+* Familiarity with AWS Lambda, S3, and CloudFormation
+* Experience designing and consuming RESTful and GraphQL APIs
+* Knowledge of Docker and CI/CD pipelines
+* Upper-Intermediate English
+
+Nice to have:
+
+* Exposure to Go or Rust
+* Understanding of Kubernetes or Terraform
+* Interest in DevSecOps or Fintech security topics
+* Contributions to open-source projects
+
+Compensation:
+€75,000–€95,000 annually, depending on experience.
+
+Summary:
+We’re looking for a Senior Backend Engineer who can design robust services, deploy them on AWS, and mentor younger developers.
